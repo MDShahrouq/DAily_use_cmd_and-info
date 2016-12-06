@@ -1,1 +1,88 @@
-$ ls
+To Test Python SimpleHTTPServer on any Folder:
+
+
+
+
+Use this sample webpages to test from the below links: https://github.com/suwebdev/wats1020-dom-manipulation
+
+
+
+
+$ lsof -i :8000             //TO display the process running on that 8000 port
+
+
+$ kill -9 7486             //To kill that process running on 8000, by specifying that PID(7486)
+
+
+
+
+$ python -m SimpleHTTPServer 8091        //To Start the Web Server
+Serving HTTP on 0.0.0.0 port 8000 ...
+
+
+Changing Ownership of Folder or FIle
+
+
+$ sudo chmod -R 777 '/var/www'
+
+
+Installing LAMP on Ubuntu
+
+
+$ sudo apt-get install apache2
+
+
+$ sudo apt-get install mysql-server
+
+
+$ sudo apt-get install php5 libapache2-mod-php5
+
+
+$ sudo /etc/init.d/apache2 restarty
+
+
+
+
+Open a web browser and navigate to http://localhost/.
+
+
+$ php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
+
+
+
+
+
+
+
+
+Installing from Requirement.txt file:
+
+
+$ apt-get install python-pip
+
+
+$ pip freeze > reqt.txt
+
+
+$ pip install -r reqt.txt
+
+
+
+
+How to Execute a .Run or .Bin file
+$ chmod +x AdobeAIRInstaller.bin
+
+
+$ ./AdobeAIRInstaller.bin
+
+
+//If not run then install this package “ $ sudo apt-get install libgtk2.0-0:i386 “
+
+
+
+
+
+
+
+
+
