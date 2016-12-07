@@ -1,0 +1,127 @@
+-> Installing process of LAMP on Ubuntu 14.04:
+
+1. Open the Terminal and type-in all the below commands.
+
+
+$ sudo apt-get install apache2
+
+
+$ sudo apt-get install mysql-server
+
+
+$ sudo apt-get install php5 libapache2-mod-php5
+
+
+$ sudo /etc/init.d/apache2 restarty
+
+
+2. Open a web browser and navigate to http://localhost/.
+
+3. Type the Below command to see whether the PHP is working or not. 
+
+$ php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-> Running the Apache server from Remote computer:
+
+1. Check your IP address , by typing ifconfig command in terminal 
+
+2. Copying some sample php of html files in /var/www/html.
+
+3. Now open the Browser and type in the remote computer IP Address in it , for example http://10.10.27.124
+
+Note: The IP Address which you are entering in your browser , the computer must be in the same network which you are connect to either WIFI or LAN.
+
+
+4. Repeat the above step 1 ,2 , 3 on that remote computer , to check whether the your apche server is running or not.
+
+
+Below are the commands to RUN , STOP , RESTART the Apache Server::
+
+ $sudo /etc/init.d/apache2 start		#To start the server
+
+ $sudo /etc/init.d/apache2 stop		#To stop the server
+
+ $sudo /etc/init.d/apache2 restart 		#To restart the server	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-> Making any Folder to serve as a Server using
+Python SimpleHTTPServer :
+
+SimpleHTTPServer module that comes with Python is a simple HTTP server that provides standard GET and HEAD request handlers.
+
+1)Open up a terminal and type:
+
+$ cd /home/some_directory
+
+$ python -m SimpleHTTPServer 
+
+That's it! Now your http server will start in port 8000
+
+2)Now open a browser and type in the remote address of the PC you want to access::
+
+http://192.168.1.2:8000
+
+You can also access it locally also :
+
+http://127.0.0.1:8000
+
+If the directory has a file named index.html, that file will be served as the initial file. If there is no index.html, then the files in the directory will be listed.
+
+#If you wish to change the port that's used start the program via:
+
+$ python -m SimpleHTTPServer 8080
+
+#To change Ownership of Folder or File we use the below command : 
+
+$ sudo chmod -R 777 '/var/www'
+
+
+
+
+
+-> Remote Sharing of Files/Folders in Ubuntu :
+Using samba software we can send multiple files at a time
+
+1. Install samba on the System:
+sudo apt-get install system-config-samba
+
+2. Create a folder you want to share. There may be a folder called "Public" choose that one if you want. Right click the folder icon and choose "Sharing Options." A new window will open up:
+3. Click on the CheckBox "share this folder", and press Create Share Button
+4. Now Right on the same folder and press Permission tab and set the permission accordingly.
+5. Open Terminal and Type in the below command to install the openssh-server
+$ sudo apt-get install openssh-server
+
+Note : Now at this point ,all the packages are install and all the setting have been done.
+
+6. Open the Nautilus and click on  "connect to server" which at bottom-left side of the window
+
+7. Now , type in the IP Address of the remote machine which you want to access the files ,
+for example smb://10.10.24.209 and press connect button. 
+
+8. So you are now connected to the remote machine and can access the file which the remote machine as share.1

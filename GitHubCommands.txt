@@ -1,0 +1,53 @@
+Setting up GitHub on PC ::
+
+$ sudo apt-get install xclip
+
+$ xclip -sel clip < root123.pub
+
+$ git config --global user.name mdshahrouq
+
+$ git config --global mdshah1994@gmail.com
+
+$ git clone https://github.com/Aiffin/PROJECT.git
+
+$ ssh-keygen -t rsa -b 4096 -C mdshah1994@gmail.com
+
+$ eval "$(ssh-agent -s)"
+
+$ ssh-add ~/.ssh/id_rsa
+
+$ sudo apt-get install xclip
+
+$ xclip -sel clip < ~/.ssh/id_rsa.pub
+
+// NOw enter That RSA key , by opening www.github.com/mdshahrouq , goto setting and public key. The Key is stored in /home/mdshahrouq/.ssh/ (id_rsa.pub)
+
+$ git clone git@github.com:Aiffin/vanisha-honda.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How to use GitHub from Terminal:
+
+$ git init
+
+$ git add .
+
+$ git status
+
+$ git commit $m "message"
+
+$ git pull origin master
+$ git push origin master
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
