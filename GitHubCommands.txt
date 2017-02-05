@@ -1,4 +1,4 @@
-Setting up GitHub on PC ::
+Setting up GitHub on PC :
 
 $ sudo apt-get install xclip
 
@@ -6,7 +6,7 @@ $ xclip -sel clip < root123.pub
 
 $ git config --global user.name mdshahrouq
 
-$ git config --global mdshah1994@gmail.com
+$ git config --global user.email mdshah1994@gmail.com
 
 $ git clone https://github.com/Aiffin/PROJECT.git
 
@@ -20,7 +20,7 @@ $ sudo apt-get install xclip
 
 $ xclip -sel clip < ~/.ssh/id_rsa.pub
 
-// NOw enter That RSA key , by opening www.github.com/mdshahrouq , goto setting and public key. The Key is stored in /home/mdshahrouq/.ssh/ (id_rsa.pub)
+// Now enter That RSA key , by opening www.github.com/mdshahrouq , goto setting and public key. The Key is stored in /home/mdshahrouq/.ssh/ (id_rsa.pub)
 
 $ git clone git@github.com:Aiffin/vanisha-honda.git
 
@@ -45,9 +45,140 @@ $ git add .
 
 $ git status
 
-$ git commit $m "message"
+$ git commit -m "message"
 
+ $ git remote -v
+
+$ git remote add origin git@github.com:MDShahrouq/DjangoREST
+
+$git remote set-url origin https://github.com/LongKnight/git-basics.git
 $ git pull origin master
+
 $ git push origin master
 
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+
+
+
+
+Advance Commands of GitHub:
+
+$ git fetch name_of_github _acc develop
+
+$ git checkout name_of_github_acc develop
+
+$ git checkout -b branch_name  	  # To switch to different branch
+
+$ git branch                              	  #To see existing branches
+
+$ git merge branch_name
+
+
+
+Adding New Repo From command line:
+echo "# libraryEMberjs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:MDShahrouq/libraryEMberjs.git
+git push -u origin master
+
+
+…or push an existing repository from the 
+command line
+git remote add origin git@github.com:MDShahrouq/libraryEMberjs.git
+git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resetting Develop and Deleting it and Again Creating it:
+ 229  git fetch pooja develop
+  230  git rebase
+  231  git rebase pooja/develop
+  232  git log
+  233  git reset --hard #
+  234  git status
+  235  git add .
+  236  git commit -m"Learing git"
+  237  git pull origin develop
+  238  clear
+  239  git checkout master
+  240  git branch
+  241  git fetch --all
+  242  git checkout master
+  243  git checkout
+  244  git checkout -f
+  245  git checkout master
+  246  git checkout
+  247  git reset --hard HEAD
+  248  git checkout master
+  249  git log
+  250  git revert 99571663029e54e6469c013b6ec8642df6c220c3
+  251  git checkout 99571663029e54e6469c013b6ec8642df6c220c3
+  252  git checkout -b newdev
+  253  git log
+  254  git checkout develop
+  255  git checkout newdev
+  256  git branch -D develop
+  257  git push origin :develop
+  258  git checkout develop
+  259  git checkout -b develop
+  260  git push origin develop
+  261  git branch -D newdev
+  262  clear
+  263  git fetch pooja develop
+  264  git checkout -b poomerge --track pooja/develop
+  265  git log
+  266  git merge develop
+  267  clear
+  268  git checkout develop
+  269  git checkout -f dveelop
+  270  git checkout -f develop
+  271  git branch -D poomerge
+  272  git fetch pooja develop
+  273  git checkout -b poocode --track pooja/develop
+  274  git branch -D develop
+  275  git push origin develop:develop
+  276  git push origin :develop
+  277  git checkout -b develop
+  278  git push origin develop
+  279  git branch -D poocode
+  280  clear
+  281  git log
+  282  git status
+  283  git add .
+  284  git commit -m "Initial Commit, after you know what ;p"
+  285  git push origin develop
+
+
+
+
